@@ -3,5 +3,6 @@
   "item.cba.arrow_shard_1" : "Arrow Debris",
   "item.cba.arrow_shard_2" : "Arrow Debris",
   "itemgroup.cba.cubic_bizzare_adventure" : "Cubic Bizzare Adventure",
+  "itemgroup.cba.cubic_bizzare_adventure_blocks": "Cubic Bizzare Adventure Blocks",
   "block.cba.meteor_ore" : "Meteor Ore"
 }

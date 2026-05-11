@@ -1,6 +1,7 @@
 package kwax.cba.item;
 
 import kwax.cba.CubicBizzareAdventure;
+import kwax.cba.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -18,6 +19,16 @@ public class ModItemGroups {
                         entries.add(ModItems.Arrow_Shard);
                         entries.add(ModItems.Arrow_Shard_1);
                         entries.add(ModItems.Arrow_Shard_2);
+
+                    }).build());
+
+    public static final ItemGroup Cubic_Bizzare_Adventure_Blocks = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(CubicBizzareAdventure.MOD_ID, "cubic_bizzare_adventure_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.Arrow_Shard))
+                    .displayName(Text.translatable("itemgroup.cba.cubic_bizzare_adventure_blocks"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.Meteor_Ore_Block);
+
                     }).build());
 
     public static void  registerItemGroup() {
