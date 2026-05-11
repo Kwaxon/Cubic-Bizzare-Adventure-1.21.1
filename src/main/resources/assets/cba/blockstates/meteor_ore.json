@@ -1,0 +1,7 @@
+{
+  "variants" : {
+    "": {
+      "model": "cba:block/meteor_ore"
+    }
+  }
+}

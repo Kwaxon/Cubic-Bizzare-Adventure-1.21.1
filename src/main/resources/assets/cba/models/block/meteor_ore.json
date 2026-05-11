@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "cba:block/cursed_ore"
+    "all": "cba:block/meteor_ore"
   }
 }
