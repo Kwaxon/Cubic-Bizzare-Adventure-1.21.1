@@ -33,6 +33,7 @@ public class CubicBizzareAdventure implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroup();
 
+		LOGGER.info('neck hurt')
 		LOGGER.info("Hello Fabric world!");
 
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
