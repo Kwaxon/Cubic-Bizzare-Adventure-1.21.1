@@ -24,7 +24,7 @@ public class ModItemGroups {
 
     public static final ItemGroup Cubic_Bizzare_Adventure_Blocks = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(CubicBizzareAdventure.MOD_ID, "cubic_bizzare_adventure_blocks"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.Arrow_Shard))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.Meteor_Ore_Block))
                     .displayName(Text.translatable("itemgroup.cba.cubic_bizzare_adventure_blocks"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.Meteor_Ore_Block);

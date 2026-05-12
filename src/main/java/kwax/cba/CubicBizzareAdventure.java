@@ -33,7 +33,6 @@ public class CubicBizzareAdventure implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroup();
-		ModStructures.registerModStructures();
 
 		LOGGER.info("test 0.0.0.1v");
 		LOGGER.info("Hello Fabric world!");
