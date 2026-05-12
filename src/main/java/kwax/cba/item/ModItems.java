@@ -22,9 +22,5 @@ public class ModItems {
 
     public static void  registerModItems() {
         CubicBizzareAdventure.LOGGER.info("Registering ModItems");
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(Arrow_Shard));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(Arrow_Shard_1));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(Arrow_Shard_2));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(Raw_Meteorite));
     }
 }
