@@ -3,6 +3,7 @@ package kwax.cba;
 import kwax.cba.block.ModBlocks;
 import kwax.cba.item.ModItemGroups;
 import kwax.cba.item.ModItems;
+import kwax.cba.structure.ModStructures;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -32,6 +33,7 @@ public class CubicBizzareAdventure implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroup();
+		ModStructures.registerModStructures();
 
 		LOGGER.info("test 0.0.0.1v");
 		LOGGER.info("Hello Fabric world!");
