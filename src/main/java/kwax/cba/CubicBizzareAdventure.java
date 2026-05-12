@@ -1,19 +1,18 @@
 package kwax.cba;
 
-import kwax.cba.block.ModBlocks;
-import kwax.cba.item.ModItemGroups;
-import kwax.cba.item.ModItems;
-import kwax.cba.structure.ModStructures;
-import net.fabricmc.api.ModInitializer;
-
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-import net.minecraft.server.network.ServerPlayerEntity;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import kwax.cba.block.ModBlocks;
+import kwax.cba.item.ModItemGroups;
+import kwax.cba.item.ModItems;
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.minecraft.server.network.ServerPlayerEntity;
 
 public class CubicBizzareAdventure implements ModInitializer {
 	public static final String MOD_ID = "cba";

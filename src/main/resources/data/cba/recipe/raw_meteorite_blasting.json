@@ -2,7 +2,7 @@
   "type": "minecraft:blasting",
   "category": "misc",
   "experience": 0.67,
-  "cookingTime": 200,
+  "cookingTime": 100,
   "group": "arrow_shard",
   "ingredient": {
     "item": "cba:raw_meteorite"
