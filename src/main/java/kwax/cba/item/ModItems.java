@@ -13,6 +13,7 @@ public class ModItems {
     public static final Item Arrow_Shard = registerItem("arrow_shard", new ArrowShard(new Item.Settings().maxCount(4)));
     public static final Item Arrow_Shard_1 = registerItem("arrow_shard_1", new Item(new Item.Settings().maxCount(4)));
     public static final Item Arrow_Shard_2 = registerItem("arrow_shard_2", new Item(new Item.Settings().maxCount(4)));
+    public static final Item Raw_Meteorite = registerItem("raw_meteorite", new Item(new Item.Settings()));
 
 //
     private static Item registerItem(String name, Item item) {
@@ -21,5 +22,9 @@ public class ModItems {
 
     public static void  registerModItems() {
         CubicBizzareAdventure.LOGGER.info("Registering ModItems");
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(Arrow_Shard));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(Arrow_Shard_1));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(Arrow_Shard_2));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(Raw_Meteorite));
     }
 }
