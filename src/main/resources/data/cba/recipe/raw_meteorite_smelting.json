@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:smelting",
+    "category": "misc",
+    "experience": 0.67,
+    "cookingTime": 200,
+    "group": "arrow_shard",
+    "ingredient": {
+        "item": "cba:raw_meteorite"
+    },
+    "result": {
+        "id": "cba:arrow_shard"
+    }
+}
