@@ -13,6 +13,8 @@ public class ModItems {
     public static final Item Arrow_Shard_2 = registerItem("arrow_shard_2", new Item(new Item.Settings().maxCount(4)));
     public static final Item Raw_Meteorite = registerItem("raw_meteorite", new Item(new Item.Settings()));
     public static final Item Rokakaka = registerItem("rokakaka", new Item(new Item.Settings().food(ModFoodComponents.ROKAKAKA)));
+    public static final Item Meteorite_Ingot = registerItem("meteorite_ingot", new Item(new Item.Settings()));
+    public static final Item Stand_Disk = registerItem("stand_disk", new StandDisk(new Item.Settings().maxCount(1)));
 
 //
     private static Item registerItem(String name, Item item) {

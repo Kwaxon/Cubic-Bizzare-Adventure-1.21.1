@@ -21,6 +21,8 @@ public class ModItemGroups {
                         entries.add(ModItems.Arrow_Shard_2);
                         entries.add(ModItems.Raw_Meteorite);
                         entries.add(ModItems.Rokakaka);
+                        entries.add(ModItems.Meteorite_Ingot);
+                        entries.add(ModItems.Stand_Disk);
                     }).build());
 
     public static final ItemGroup Cubic_Bizzare_Adventure_Blocks = Registry.register(Registries.ITEM_GROUP,

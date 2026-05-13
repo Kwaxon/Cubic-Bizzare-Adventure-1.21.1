@@ -4,6 +4,8 @@
   "item.cba.arrow_shard_2" : "Arrow Debris",
   "item.cba.raw_meteorite" : "Raw Meteorite",
   "item.cba.rokakaka" : "Rokakaka",
+  "item.cba.meteorite_ingot" : "Meteorite Ingot",
+  "item.cba.stand_disk" : "Stand Disk",
   "itemgroup.cba.cubic_bizzare_adventure" : "Cubic Bizzare Adventure",
   "itemgroup.cba.cubic_bizzare_adventure_blocks": "Cubic Bizzare Adventure Blocks",
   "block.cba.meteor_ore" : "Meteor Ore"
