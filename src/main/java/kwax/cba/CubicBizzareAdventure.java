@@ -4,6 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.minecraft.entity.attribute.ClampedEntityAttribute;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,6 +17,8 @@ import kwax.cba.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.server.network.ServerPlayerEntity;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 
 public class CubicBizzareAdventure implements ModInitializer {
 	public static final String MOD_ID = "cba";
@@ -22,6 +28,10 @@ public class CubicBizzareAdventure implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static final Set<UUID> FROZEN_PLAYERS = new HashSet<>();
+
+	private boolean isFirstJoin(ServerPlayerEntity player) {
+		return true;
+	};
 
 	@Override
 	public void onInitialize() {
@@ -35,6 +45,13 @@ public class CubicBizzareAdventure implements ModInitializer {
 
 		LOGGER.info("test 0.0.0.1v");
 		LOGGER.info("Hello Fabric world!");
+
+		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
+			ServerPlayerEntity player = handler.getPlayer();
+
+			
+		});
+
 
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
 			for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
