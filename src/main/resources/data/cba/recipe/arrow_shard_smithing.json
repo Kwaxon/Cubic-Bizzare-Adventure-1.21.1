@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "group": "item",
+  "base": {
+    "item": "cba:arrow_shard_1"
+  },
+  "addition": {
+    "item": "cba:arrow_shard_2"
+  },
+  "template": {
+    "item": "minecraft:gold_ingot"
+  },
+  "result": {
+    "id": "cba:arrow_shard"
+  }
+}

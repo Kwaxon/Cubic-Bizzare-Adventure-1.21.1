@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
+import kwax.cba.component.ModDataComponentTypes;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.minecraft.entity.attribute.ClampedEntityAttribute;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -42,6 +43,7 @@ public class CubicBizzareAdventure implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroup();
+		ModDataComponentTypes.registerComponents();
 
 		LOGGER.info("test 0.0.0.1v");
 		LOGGER.info("Hello Fabric world!");
@@ -49,7 +51,7 @@ public class CubicBizzareAdventure implements ModInitializer {
 		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
 			ServerPlayerEntity player = handler.getPlayer();
 
-			
+
 		});
 
 
