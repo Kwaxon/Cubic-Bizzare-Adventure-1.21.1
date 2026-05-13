@@ -8,7 +8,7 @@
     "item": "cba:arrow_shard_2"
   },
   "template": {
-    "item": "minecraft:gold_ingot"
+    "item": "cba:meteorite_ingot"
   },
   "result": {
     "id": "cba:arrow_shard"

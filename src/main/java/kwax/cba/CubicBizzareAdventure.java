@@ -4,12 +4,11 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
+import kwax.cba.bloodlines.Bloodlines;
 import kwax.cba.component.ModDataComponentTypes;
+import kwax.cba.misc.ModCommands;
+import kwax.cba.misc.ModStates;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
-import net.minecraft.entity.attribute.ClampedEntityAttribute;
-import net.minecraft.entity.attribute.EntityAttribute;
-import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,8 +19,6 @@ import kwax.cba.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.server.network.ServerPlayerEntity;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
 
 public class CubicBizzareAdventure implements ModInitializer {
 	public static final String MOD_ID = "cba";
@@ -46,24 +43,30 @@ public class CubicBizzareAdventure implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroup();
 		ModDataComponentTypes.registerComponents();
+		ModCommands.registerCommands();
 
 		LOGGER.info("test 0.0.0.1v");
 		LOGGER.info("Hello Fabric world!");
 
 		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
 			ServerPlayerEntity player = handler.getPlayer();
+			ModStates state = ModStates.getServerState(server);
 
-			NbtCompound data = player.writeNbt(new NbtCompound());
+			CubicBizzareAdventure.LOGGER.info(player.getUuid().toString());
 
-			if (!data.contains("first_join")) {
-				data.putString("Stand", "Standless");
-				data.putBoolean("first_join", true);
-				player.readNbt(data);
-				player.sendMessage(Text.literal("You got "+ data.getString("Stand")));
+			String[] table = Bloodlines.getBloodlines();
+
+			if (!state.joinedPlayers.contains(player.getUuid())) {
+				state.joinedPlayers.add(player.getUuid());
+
+				String family = table[player.getRandom().nextInt(table.length)];
+				state.bloodlines.put(player.getUuid(), family);
+
+				state.markDirty();
+
+				player.sendMessage(Text.literal("You were born as "+ family));
 			}
-			else {
-				player.sendMessage(Text.literal("Welcome "+ player.getName().getString()));
-			}
+
 
 		});
 
