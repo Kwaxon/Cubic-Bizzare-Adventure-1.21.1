@@ -3,11 +3,11 @@
     "category": "misc",
     "experience": 0.67,
     "cookingTime": 400,
-    "group": "arrow_shard",
+    "group": "meteorite_ingot",
     "ingredient": {
         "item": "cba:raw_meteorite"
     },
     "result": {
-        "id": "cba:arrow_shard"
+        "id": "cba:meteorite_ingot"
     }
 }
