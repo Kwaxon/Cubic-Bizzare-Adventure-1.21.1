@@ -1,9 +1,7 @@
 package kwax.cba.item;
 
 import kwax.cba.CubicBizzareAdventure;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -14,6 +12,7 @@ public class ModItems {
     public static final Item Arrow_Shard_1 = registerItem("arrow_shard_1", new Item(new Item.Settings().maxCount(4)));
     public static final Item Arrow_Shard_2 = registerItem("arrow_shard_2", new Item(new Item.Settings().maxCount(4)));
     public static final Item Raw_Meteorite = registerItem("raw_meteorite", new Item(new Item.Settings()));
+    public static final Item Rokakaka = registerItem("rokakaka", new Item(new Item.Settings().food(ModFoodComponents.ROKAKAKA)));
 
 //
     private static Item registerItem(String name, Item item) {
