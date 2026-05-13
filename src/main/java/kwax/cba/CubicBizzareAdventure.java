@@ -9,6 +9,8 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.minecraft.entity.attribute.ClampedEntityAttribute;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.text.Text;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,6 +53,17 @@ public class CubicBizzareAdventure implements ModInitializer {
 		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
 			ServerPlayerEntity player = handler.getPlayer();
 
+			NbtCompound data = player.writeNbt(new NbtCompound());
+
+			if (!data.contains("first_join")) {
+				data.putString("Stand", "Standless");
+				data.putBoolean("first_join", true);
+				player.readNbt(data);
+				player.sendMessage(Text.literal("You got "+ data.getString("Stand")));
+			}
+			else {
+				player.sendMessage(Text.literal("Welcome "+ player.getName().getString()));
+			}
 
 		});
 

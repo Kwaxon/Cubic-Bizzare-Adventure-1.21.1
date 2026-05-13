@@ -1,5 +1,7 @@
 package kwax.cba.component;
 
+import com.jcraft.jorbis.Block;
+import com.mojang.serialization.Codec;
 import kwax.cba.CubicBizzareAdventure;
 import net.minecraft.component.ComponentType;
 import net.minecraft.registry.Registries;
@@ -10,8 +12,8 @@ import net.minecraft.util.math.BlockPos;
 import java.util.function.UnaryOperator;
 
 public class ModDataComponentTypes {
-    public static final ComponentType<BlockPos> COORDINATES =
-           register("coordinates", blockPosBuilder -> blockPosBuilder.codec(BlockPos.CODEC));
+    public static final ComponentType<Boolean> FirstJoin =
+            register("first_join", builder -> builder.codec(Codec.BOOL));
 
 
     private static <T>ComponentType<T> register(String name, UnaryOperator<ComponentType.Builder<T>> builderOperator) {
