@@ -39,7 +39,7 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-	modImplementation "curse.maven:aaa-particles-979809:7944957"
+	modImplementation "curse.maven:aaa-particles-979809:8077356"
 	modImplementation "curse.maven:architectury-api-419699:5786326"
 	modImplementation "curse.maven:geckolib-388172:7707138"
 	modImplementation "curse.maven:modmenu-308702:7808443"
